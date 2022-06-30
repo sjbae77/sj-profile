@@ -157,6 +157,13 @@ section {
           font-size: $fontL;
           font-weight: 600;
         }
+
+        p {
+          margin-top: 10px;
+          word-break: keep-all;
+          font-size: $fontM;
+          color: #444;
+        }
       }
     }
   }
@@ -183,6 +190,7 @@ section {
 
           p {
             color: #ccc;
+            margin-top: 0;
           }
         }
 
@@ -250,13 +258,7 @@ section {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            p {
-              margin-top: 10px;
-              word-break: keep-all;
-              font-size: $fontM;
-              color: #444;
-            }
-  
+            
             .icon-wrap {
               width: 100%;
               display: flex;
@@ -287,7 +289,6 @@ section {
   }
 }
 
-
 #project {
   h2 {
     font-size: $fontXXXXL;
@@ -298,8 +299,30 @@ section {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 100px;
+      margin-bottom: 70px;
       background-color: #222;
+      
+      &.left {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: 0.8s;
+
+        &.on {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      &.right {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: 0.8s;
+
+        &.on {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
 
       .pic {
         width: 40%;
@@ -317,29 +340,43 @@ section {
         padding: 40px 30px;
         color: #fff;
 
-        .title {
-          font-size: $fontXL;
-          font-weight: 600;
-        }
-        .pdfBtn {
-          color: #fff;
-          margin-left: 20px;
+        .title-wrap {
+          position: relative;
 
-          i {
-            font-size: $fontXXL;
-            margin-right: 10px;
+          .title {
+            font-size: $fontXL;
+            font-weight: 600;
           }
-          
-          span {
-            display: none;
-            font-size: $fontM;
+
+          .pdfBtn {
             color: #fff;
+            margin-left: 20px;
+  
+            i {
+              font-size: $fontXXL;
+              margin-right: 10px;
+            }
+            
+            span {
+              display: none;
+              font-size: $fontM;
+              color: #fff;
+            }
+  
+            &:hover {
+              span {
+                display: inline-block;
+              }
+            }
           }
 
-          &:hover {
-            span {
-              display: inline-block;
-            }
+          em {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            color: #bf6161;
+            font-weight: 600;
           }
         }
 

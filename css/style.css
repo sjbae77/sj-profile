@@ -133,6 +133,12 @@ section > .inner {
   font-size: 1rem;
   font-weight: 600;
 }
+#about article .inner .cont p {
+  margin-top: 10px;
+  word-break: keep-all;
+  font-size: 0.9rem;
+  color: #444;
+}
 #about .contact-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -154,6 +160,7 @@ section > .inner {
 }
 #about .contact-wrap article:nth-of-type(1) .inner p {
   color: #ccc;
+  margin-top: 0;
 }
 #about .contact-wrap article:nth-of-type(1)::after {
   content: "";
@@ -209,12 +216,6 @@ section > .inner {
   top: 50%;
   transform: translateY(-50%);
 }
-#about .info-wrap article:nth-of-type(3) .inner .cont p {
-  margin-top: 10px;
-  word-break: keep-all;
-  font-size: 0.9rem;
-  color: #444;
-}
 #about .info-wrap article:nth-of-type(3) .inner .cont .icon-wrap {
   width: 100%;
   display: flex;
@@ -240,8 +241,26 @@ section > .inner {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   background-color: #222;
+}
+#project .cont-wrap .cont.left {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 0.8s;
+}
+#project .cont-wrap .cont.left.on {
+  opacity: 1;
+  transform: translateX(0);
+}
+#project .cont-wrap .cont.right {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 0.8s;
+}
+#project .cont-wrap .cont.right.on {
+  opacity: 1;
+  transform: translateX(0);
 }
 #project .cont-wrap .cont .pic {
   width: 40%;
@@ -257,25 +276,36 @@ section > .inner {
   padding: 40px 30px;
   color: #fff;
 }
-#project .cont-wrap .cont .desc .title {
+#project .cont-wrap .cont .desc .title-wrap {
+  position: relative;
+}
+#project .cont-wrap .cont .desc .title-wrap .title {
   font-size: 1.5rem;
   font-weight: 600;
 }
-#project .cont-wrap .cont .desc .pdfBtn {
+#project .cont-wrap .cont .desc .title-wrap .pdfBtn {
   color: #fff;
   margin-left: 20px;
 }
-#project .cont-wrap .cont .desc .pdfBtn i {
+#project .cont-wrap .cont .desc .title-wrap .pdfBtn i {
   font-size: 2rem;
   margin-right: 10px;
 }
-#project .cont-wrap .cont .desc .pdfBtn span {
+#project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
   display: none;
   font-size: 0.9rem;
   color: #fff;
 }
-#project .cont-wrap .cont .desc .pdfBtn:hover span {
+#project .cont-wrap .cont .desc .title-wrap .pdfBtn:hover span {
   display: inline-block;
+}
+#project .cont-wrap .cont .desc .title-wrap em {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #bf6161;
+  font-weight: 600;
 }
 #project .cont-wrap .cont .desc p {
   margin-top: 20px;

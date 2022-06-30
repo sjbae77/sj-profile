@@ -54,7 +54,7 @@ section {
   }
 }
 
-#main {
+#visual {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -130,18 +130,17 @@ section {
 }
 
 #about {
-  display: flex;
-  flex-wrap: wrap;
 
   article {
     position: relative;
-    padding: 0 20px;
+    padding: 0 30px 0 20px;
 
     .title {
       position: absolute;
       top: 0;
-      left: 0;
-      transform: rotate(-90deg);
+      left: -3px;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
       font-size: $fontL;
       font-weight: 600;
     }
@@ -158,52 +157,125 @@ section {
           font-size: $fontL;
           font-weight: 600;
         }
-        p {
-          margin-top: 10px;
-          word-break: keep-all;
-          font-size: $fontM;
-          color: #444;
+      }
+    }
+  }
+
+  .contact-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    article {
+      position: relative;
+      padding: 0 30px 0 40px;
+
+      .title {
+        left: 18px;
+      }
+
+      &:nth-of-type(1) {
+        width: 70%;
+        color: #fff;
+
+        .inner {
+          border-left: 3px solid #aaa;
+
+          p {
+            color: #ccc;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 100%;
+          height: 140%;
+          background-color: #222;
+          z-index: -1;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 30%;
+      }
+
+      .inner {
+        .cont ul li {
+          margin-bottom: 5px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+      &:nth-of-type(1) {
+        width: 40%;
+      }
+      &:nth-of-type(2) {
+        width: 40%;
+
+        .inner {
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            background-color: #eee;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        width: 20%;
+      }
+
+      .inner {
+        .cont {
+          p {
+            margin-top: 10px;
+            word-break: keep-all;
+            font-size: $fontM;
+            color: #444;
+          }
         }
       }
     }
 
-    &:nth-of-type(1) {
-      width: 40%;
-      .title {
-        top: 34px;
-        left: -37px;
-      }
-    }
-    &:nth-of-type(2) {
-      width: 40%;
-      .title {
-        top: 83px;
-        left: -86px;
-      }
-    }
-    &:nth-of-type(3) {
-      width: 20%;
-      .title {
-        top: 7px;
-        left: -6px;
-      }
-    }
   }
+
+
 }
 
 #project {
   h2 {
-    font-size: $fontXXXL;
+    font-size: $fontXXXXL;
+    padding: 50px 0;
   }
   .cont-wrap {
     .cont {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 100px;
+      background-color: #222;
 
       .pic {
         width: 40%;
-        border: 8px solid #222;
+        padding: 10px;
 
         img {
           width: 100%;
@@ -214,14 +286,35 @@ section {
 
       .desc {
         width: 60%;
-        padding: 25px;
-        background-color: #222;
+        padding: 40px 30px;
         color: #fff;
 
         .title {
           font-size: $fontXL;
           font-weight: 600;
         }
+        .pdfBtn {
+          color: #fff;
+          margin-left: 20px;
+
+          i {
+            font-size: $fontXXL;
+            margin-right: 10px;
+          }
+          
+          span {
+            display: none;
+            font-size: $fontM;
+            color: #fff;
+          }
+
+          &:hover {
+            span {
+              display: inline-block;
+            }
+          }
+        }
+
         p {
           margin-top: 20px;
           font-size: $fontL;
@@ -232,12 +325,14 @@ section {
             color: #fff;
           }
         }
-        a {
+        .moreBtn {
           position: relative;
           display: inline-block;
-          margin-top: 20px;
-          color: #ccc;
+          margin-top: 40px;
+          color: #aaa;
           font-weight: 600;
+          font-size: $fontM;
+          transition: 0.5s;
 
           span {
             position: absolute;
@@ -247,7 +342,7 @@ section {
             display: inline-block;
             width: 40px;
             height: 1px;
-            background-color: #fff;
+            background-color: #aaa;
             transition: 0.5s;
 
             &::before {
@@ -267,9 +362,12 @@ section {
           }
 
           &:hover {
+            color: #fff;
+
             span {
               width: 70px;
               right: -80px;
+              background-color: #fff;
 
               &::before {
                 opacity: 1;
@@ -278,6 +376,73 @@ section {
           }
         }
       }
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  padding: 200px 0;
+  background-color: #333;
+  color: #fff;
+
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    .text {
+      strong {
+        display: block;
+        font-size: $fontXXXXL;
+        color: rgba($color: #fff, $alpha: 0.3);
+      }
+  
+      span {
+        font-size: $fontXXL;
+        color: #ccc;
+        margin-left: 100px;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin-left: 30px;
+        
+        a {
+          display: block;
+          width: 80px;
+          height: 80px;
+          background-color: #111;
+          color: #fff;
+          border-radius: 50%;
+          position: relative;
+          pointer-events: none;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          font-size: $fontXXL;
+        }
+
+        &:last-child {
+
+          a {
+            pointer-events: all;
+          }
+        }
+      }
+
     }
   }
 }

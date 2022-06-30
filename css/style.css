@@ -43,51 +43,51 @@ section > .inner {
   margin: 0 auto;
 }
 
-#main {
+#visual {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
-#main .pic, #main .text-wrap {
+#visual .pic, #visual .text-wrap {
   width: 50%;
 }
-#main .pic {
+#visual .pic {
   filter: grayscale(1);
 }
-#main .pic img {
+#visual .pic img {
   width: 90%;
   height: 100%;
   object-fit: cover;
 }
-#main .topText em {
+#visual .topText em {
   display: block;
   font-size: 14px;
   line-height: 1.1;
 }
-#main .text-wrap {
+#visual .text-wrap {
   position: relative;
 }
-#main .text-wrap .text {
+#visual .text-wrap .text {
   z-index: 2;
   position: absolute;
   top: 195px;
   padding-right: 30px;
 }
-#main .text-wrap .text h1 {
+#visual .text-wrap .text h1 {
   font-size: 4rem;
   line-height: 1;
 }
-#main .text-wrap .text h2 {
+#visual .text-wrap .text h2 {
   margin-top: 10px;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
 }
-#main .text-wrap .text p {
+#visual .text-wrap .text p {
   margin-top: 5px;
   word-break: keep-all;
   line-height: 1.7;
 }
-#main .text-wrap .text::after {
+#visual .text-wrap .text::after {
   content: "";
   display: block;
   position: absolute;
@@ -97,7 +97,7 @@ section > .inner {
   height: 2px;
   background-color: #222;
 }
-#main::after {
+#visual::after {
   content: "";
   display: block;
   position: absolute;
@@ -108,19 +108,16 @@ section > .inner {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#about {
-  display: flex;
-  flex-wrap: wrap;
-}
 #about article {
   position: relative;
-  padding: 0 20px;
+  padding: 0 30px 0 20px;
 }
 #about article .title {
   position: absolute;
   top: 0;
-  left: 0;
-  transform: rotate(-90deg);
+  left: -3px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -136,45 +133,95 @@ section > .inner {
   font-size: 1rem;
   font-weight: 600;
 }
-#about article .inner .cont p {
+#about .contact-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+#about .contact-wrap article {
+  position: relative;
+  padding: 0 30px 0 40px;
+}
+#about .contact-wrap article .title {
+  left: 18px;
+}
+#about .contact-wrap article:nth-of-type(1) {
+  width: 70%;
+  color: #fff;
+}
+#about .contact-wrap article:nth-of-type(1) .inner {
+  border-left: 3px solid #aaa;
+}
+#about .contact-wrap article:nth-of-type(1) .inner p {
+  color: #ccc;
+}
+#about .contact-wrap article:nth-of-type(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 140%;
+  background-color: #222;
+  z-index: -1;
+}
+#about .contact-wrap article:nth-of-type(2) {
+  width: 30%;
+}
+#about .contact-wrap article .inner .cont ul li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+#about .info-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#about .info-wrap article:nth-of-type(1) {
+  width: 40%;
+}
+#about .info-wrap article:nth-of-type(2) {
+  width: 40%;
+}
+#about .info-wrap article:nth-of-type(2) .inner {
+  position: relative;
+}
+#about .info-wrap article:nth-of-type(2) .inner::before {
+  content: "";
+  display: block;
+  background-color: #eee;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+#about .info-wrap article:nth-of-type(3) {
+  width: 20%;
+}
+#about .info-wrap article .inner .cont p {
   margin-top: 10px;
   word-break: keep-all;
   font-size: 0.9rem;
   color: #444;
 }
-#about article:nth-of-type(1) {
-  width: 40%;
-}
-#about article:nth-of-type(1) .title {
-  top: 34px;
-  left: -37px;
-}
-#about article:nth-of-type(2) {
-  width: 40%;
-}
-#about article:nth-of-type(2) .title {
-  top: 83px;
-  left: -86px;
-}
-#about article:nth-of-type(3) {
-  width: 20%;
-}
-#about article:nth-of-type(3) .title {
-  top: 7px;
-  left: -6px;
-}
 
 #project h2 {
-  font-size: 4rem;
+  font-size: 5rem;
+  padding: 50px 0;
 }
 #project .cont-wrap .cont {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 100px;
+  background-color: #222;
 }
 #project .cont-wrap .cont .pic {
   width: 40%;
-  border: 8px solid #222;
+  padding: 10px;
 }
 #project .cont-wrap .cont .pic img {
   width: 100%;
@@ -183,13 +230,28 @@ section > .inner {
 }
 #project .cont-wrap .cont .desc {
   width: 60%;
-  padding: 25px;
-  background-color: #222;
+  padding: 40px 30px;
   color: #fff;
 }
 #project .cont-wrap .cont .desc .title {
   font-size: 1.5rem;
   font-weight: 600;
+}
+#project .cont-wrap .cont .desc .pdfBtn {
+  color: #fff;
+  margin-left: 20px;
+}
+#project .cont-wrap .cont .desc .pdfBtn i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+#project .cont-wrap .cont .desc .pdfBtn span {
+  display: none;
+  font-size: 0.9rem;
+  color: #fff;
+}
+#project .cont-wrap .cont .desc .pdfBtn:hover span {
+  display: inline-block;
 }
 #project .cont-wrap .cont .desc p {
   margin-top: 20px;
@@ -200,14 +262,16 @@ section > .inner {
 #project .cont-wrap .cont .desc p.skill {
   color: #fff;
 }
-#project .cont-wrap .cont .desc a {
+#project .cont-wrap .cont .desc .moreBtn {
   position: relative;
   display: inline-block;
-  margin-top: 20px;
-  color: #ccc;
+  margin-top: 40px;
+  color: #aaa;
   font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.5s;
 }
-#project .cont-wrap .cont .desc a span {
+#project .cont-wrap .cont .desc .moreBtn span {
   position: absolute;
   top: 50%;
   right: -50px;
@@ -215,10 +279,10 @@ section > .inner {
   display: inline-block;
   width: 40px;
   height: 1px;
-  background-color: #fff;
+  background-color: #aaa;
   transition: 0.5s;
 }
-#project .cont-wrap .cont .desc a span::before {
+#project .cont-wrap .cont .desc .moreBtn span::before {
   content: "";
   display: block;
   position: absolute;
@@ -232,12 +296,69 @@ section > .inner {
   opacity: 0;
   transition: 0.5s;
 }
-#project .cont-wrap .cont .desc a:hover span {
+#project .cont-wrap .cont .desc .moreBtn:hover {
+  color: #fff;
+}
+#project .cont-wrap .cont .desc .moreBtn:hover span {
   width: 70px;
   right: -80px;
+  background-color: #fff;
 }
-#project .cont-wrap .cont .desc a:hover span::before {
+#project .cont-wrap .cont .desc .moreBtn:hover span::before {
   opacity: 1;
+}
+
+#footer {
+  width: 100%;
+  padding: 200px 0;
+  background-color: #333;
+  color: #fff;
+}
+#footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#footer .inner .text strong {
+  display: block;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+#footer .inner .text span {
+  font-size: 2rem;
+  color: #ccc;
+  margin-left: 100px;
+}
+#footer .inner .icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+#footer .inner .icon li {
+  margin-left: 30px;
+}
+#footer .inner .icon li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+  pointer-events: none;
+}
+#footer .inner .icon li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+#footer .inner .icon li:last-child a {
+  pointer-events: all;
 }
 
 /*# sourceMappingURL=style.css.map */

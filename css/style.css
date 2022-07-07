@@ -302,16 +302,12 @@ section > .inner {
   margin-left: 20px;
 }
 #project .cont-wrap .cont .desc .title-wrap .pdfBtn i {
-  font-size: 2rem;
-  margin-right: 10px;
+  font-size: 1.5rem;
 }
 #project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
-  display: none;
-  font-size: 0.9rem;
-  color: #fff;
-}
-#project .cont-wrap .cont .desc .title-wrap .pdfBtn:hover span {
   display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: underline;
 }
 #project .cont-wrap .cont .desc .title-wrap em {
   position: absolute;
@@ -543,7 +539,7 @@ section > .inner {
     margin-left: 5px;
   }
   #project .cont-wrap .cont .desc .title-wrap .pdfBtn i {
-    margin-right: 5px;
+    font-size: 20px;
   }
   #project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
     font-size: 13px;

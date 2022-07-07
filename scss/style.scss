@@ -369,20 +369,13 @@ section {
             margin-left: 20px;
   
             i {
-              font-size: $fontXXL;
-              margin-right: 10px;
+              font-size: $fontXL;
             }
             
             span {
-              display: none;
+              display: inline-block;
               font-size: $fontM;
-              color: #fff;
-            }
-  
-            &:hover {
-              span {
-                display: inline-block;
-              }
+              text-decoration: underline;
             }
           }
 
@@ -668,7 +661,7 @@ section {
           margin-left: 5px;
 
           i {
-            margin-right: 5px;
+            font-size: 20px;
           }
   
           span {

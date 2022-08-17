@@ -172,14 +172,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 100px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    opacity: 1;
 
     article {
       position: relative;
@@ -231,14 +224,7 @@ section {
   .info-wrap {
     display: flex;
     flex-wrap: wrap;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-
-    &.on {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    opacity: 1;
 
     article {
       &:nth-of-type(1) {
@@ -317,28 +303,6 @@ section {
       flex-wrap: wrap;
       margin-bottom: 70px;
       background-color: #222;
-      
-      &.left {
-        opacity: 0;
-        transform: translateX(100px);
-        transition: 0.8s;
-
-        &.on {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      &.right {
-        opacity: 0;
-        transform: translateX(-100px);
-        transition: 0.8s;
-
-        &.on {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
 
       .pic {
         width: 40%;

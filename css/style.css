@@ -277,7 +277,7 @@ section > .inner {
 }
 #project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: underline;
 }
 #project .cont-wrap .cont .desc .title-wrap em {

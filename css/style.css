@@ -33,7 +33,7 @@ body {
 
 section {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 section:last-child {
   margin-bottom: 0;
@@ -127,16 +127,17 @@ section > .inner {
   height: 100%;
 }
 #about article .inner .cont {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #about article .inner .cont span {
   font-size: 1rem;
   font-weight: 600;
 }
 #about article .inner .cont p {
-  margin-top: 10px;
+  margin-top: 3px;
   word-break: keep-all;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #444;
 }
 #about .contact-wrap {

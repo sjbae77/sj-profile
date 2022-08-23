@@ -328,22 +328,6 @@ section {
             font-size: $fontXL;
             font-weight: 600;
           }
-
-          .pdfBtn {
-            color: #fff;
-            margin-left: 20px;
-  
-            i {
-              font-size: $fontXL;
-            }
-            
-            span {
-              display: inline-block;
-              font-size: $fontL;
-              text-decoration: underline;
-            }
-          }
-
           em {
             position: absolute;
             top: 50%;
@@ -364,6 +348,13 @@ section {
             color: #fff;
           }
         }
+
+        .btn-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
         .moreBtn {
           position: relative;
           display: inline-block;
@@ -412,6 +403,21 @@ section {
                 opacity: 1;
               }
             }
+          }
+        }
+
+        .pdfBtn {
+          color: #fff;
+          margin-top: 40px;
+
+          i {
+            font-size: $fontXL;
+          }
+          
+          span {
+            display: inline-block;
+            font-size: $fontL;
+            text-decoration: underline;
           }
         }
       }
@@ -622,18 +628,19 @@ section {
           top: -18px;
           font-size: $fontM;
         }
-        .pdfBtn {
-          margin-left: 5px;
-
-          i {
-            font-size: 20px;
-          }
-  
-          span {
-            font-size: 13px;
-          }
-        }
       } 
+
+      .pdfBtn {
+        margin-left: 5px;
+
+        i {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 13px;
+        }
+      }
     } 
   }
 

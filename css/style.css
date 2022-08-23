@@ -268,18 +268,6 @@ section > .inner {
   font-size: 1.5rem;
   font-weight: 600;
 }
-#project .cont-wrap .cont .desc .title-wrap .pdfBtn {
-  color: #fff;
-  margin-left: 20px;
-}
-#project .cont-wrap .cont .desc .title-wrap .pdfBtn i {
-  font-size: 1.5rem;
-}
-#project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
-  display: inline-block;
-  font-size: 1rem;
-  text-decoration: underline;
-}
 #project .cont-wrap .cont .desc .title-wrap em {
   position: absolute;
   top: 50%;
@@ -296,6 +284,11 @@ section > .inner {
 }
 #project .cont-wrap .cont .desc p.skill {
   color: #fff;
+}
+#project .cont-wrap .cont .desc .btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 #project .cont-wrap .cont .desc .moreBtn {
   position: relative;
@@ -341,6 +334,18 @@ section > .inner {
 }
 #project .cont-wrap .cont .desc .moreBtn:hover span::before {
   opacity: 1;
+}
+#project .cont-wrap .cont .desc .pdfBtn {
+  color: #fff;
+  margin-top: 40px;
+}
+#project .cont-wrap .cont .desc .pdfBtn i {
+  font-size: 1.5rem;
+}
+#project .cont-wrap .cont .desc .pdfBtn span {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
 #footer {
@@ -506,13 +511,13 @@ section > .inner {
     top: -18px;
     font-size: 0.9rem;
   }
-  #project .cont-wrap .cont .desc .title-wrap .pdfBtn {
+  #project .cont-wrap .cont .desc .pdfBtn {
     margin-left: 5px;
   }
-  #project .cont-wrap .cont .desc .title-wrap .pdfBtn i {
+  #project .cont-wrap .cont .desc .pdfBtn i {
     font-size: 20px;
   }
-  #project .cont-wrap .cont .desc .title-wrap .pdfBtn span {
+  #project .cont-wrap .cont .desc .pdfBtn span {
     font-size: 13px;
   }
 
